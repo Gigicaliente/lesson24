@@ -1,0 +1,114 @@
+p {
+    margin-left: 100px;
+}
+
+.container {
+display: flex;
+flex-direction: column;
+    gap: 40px;
+    margin-left: 100px;
+}
+
+.rotate {
+width: 100px;
+height: 100px;
+border: 1px solid black;
+background: linear-gradient(to top, yellow, green, blue);
+transform-origin: center;
+animation: rotate 5s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.scale {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, yellow 0%, orange 50% , red 100%);
+    animation: scale 1s infinite;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(100%);
+    }
+
+    100% {
+        transform: scale(150%);
+    }
+}
+
+.translate {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, white, grey, black);
+    animation: translate 5s infinite;
+}
+
+@keyframes translate {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(400px);
+    }
+}
+
+.skew {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background: radial-gradient(ellipse at right, white 0%, pink 70%, violet 100%);
+    box-shadow: 10px 10px 5px 3px rgba(93, 16, 48, 0.6);
+    animation: skew 3s linear;
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(0 deg, 0 deg);
+    }
+
+    100% {
+        transform: skew(20deg, 50deg);
+    }
+}
+
+.transition {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to left, lightblue, blue);
+    transition: 2s ease-in-out; 
+}
+
+.transition:hover {
+    transform: rotate(20deg);
+}
+
+.translateY {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top, lightgreen 0%, green 100%);
+    animation: translateY 5s ease-in-out 1s infinite;
+}
+
+@keyframes translateY {
+   0% {
+    transform: translateY(0px);
+   }
+   100% {
+    transform: translateY(50px);
+   }
+
+}
